@@ -240,13 +240,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--grey-bg-color);
   margin-bottom: 30px;
+  width: 270;
+  height: 120px;
+  background-color: var(--grey-bg-color);
 }
 .feautures-svg {
   width: 70px;
   height: 70px;
-  margin: 25px 100px;
 }
 /*doing*/
 .section-doing {
@@ -266,8 +267,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
-  padding: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--primary-white-color);
   font-weight: 700;
@@ -389,6 +393,7 @@ body {
 }
 .address-footer .link {
   color: var(--footer-text-color);
+  transition: color 250ms var(--cubic);
 }
 .list-footer {
   margin-top: 9px;
@@ -419,12 +424,11 @@ body {
   color: var(--primary-white-color);
   border-radius: 50px;
   background-color: var(--icons-footer-bg);
-  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 }
 .networks-footer .networks-link:hover,
 .networks-footer .networks-link:focus {
   background-color: var(--accent-color);
-  color: var(--primary-white-color);
 }
 
 .networks-footer .icon + .icon {
@@ -506,7 +510,8 @@ body {
   position: absolute;
   top: 0;
   transform: translateY(100%);
-  transition: transform 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  opacity: 0;
   width: 100%;
   height: 100%;
   background-color: var(--bg-overflow-works);
@@ -514,6 +519,7 @@ body {
 .works .portfolio-link:hover .overflow,
 .works .portfolio-link:focus .overflow {
   transform: translateY(0);
+  opacity: 1;
 }
 .works .item {
   margin-right: 30px;
